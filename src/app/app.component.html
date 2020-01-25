@@ -1,7 +1,7 @@
 <h1>{{title}}</h1>
 <input [value]="title">
 <button (click)="toggleVisible($event)">click me</button>
-<div *ngIf="visible">Visible 1</div>
+<div *ngIf="visible">Visible</div>
 <div *ngIf="!visible">Not visible</div>
 <ul>
   <li *ngFor="let user of users">
