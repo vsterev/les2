@@ -1,0 +1,19 @@
+<h1>{{title}}</h1>
+<input [value]="title">
+<button (click)="toggleVisible($event)">click me</button>
+<div *ngIf="visible">Visible 1</div>
+<div *ngIf="!visible">Not visible</div>
+<ul>
+  <li *ngFor="let user of users">
+    <!-- <span>{{users && user.name | uppercase}}</span> - <span>{{user?.age}}</span>  -->
+    <app-user [info]="user" (delete)="deleteUser($event)"></app-user>
+  </li>
+  <!-- <app-list></app-list> -->
+</ul>
+<button [style.color]="isSpecial ? 'red': 'green'">Red</button>
+<button [style.background-color]="canSave ? 'cyan': 'grey'" >Save</button>
+<input #titleInput>
+<!-- <button (click)="title=titleInput.value">titleChange</button> -->
+<!-- <button (click)="titleChange($event)">titleChange</button> -->
+<button (click)="titleChange(titleInput.value)">titleChange</button>
+<img [src]="link">

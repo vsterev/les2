@@ -1,0 +1,4 @@
+<li *ngFor="let user of users" >
+<span>{{user.name}} - {{user.age}}</span>
+<button (click)="deleteAct(user)">Remove</button>
+</li>
